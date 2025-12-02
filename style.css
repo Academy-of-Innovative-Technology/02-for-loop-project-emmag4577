@@ -1,0 +1,54 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+      background: linear-gradient(#b3d9ff, #e6f5ff);
+      color: #00334d;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px;
+      background: #ffffffaa;
+      backdrop-filter: blur(5px);
+      border-bottom: 2px solid #99ccff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #004d80;
+      text-shadow: 1px 1px 3px #ffffff;
+    }
+
+    main {
+      margin: 30px auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      background: #ffffffcc;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #7fbfff;
+      backdrop-filter: blur(4px);
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+     @keyframes snow {
+      0%   { transform: translateY(-10px); opacity: 1; }
+      100% { transform: translateY(20px); opacity: 0; }
+    }
+
+    body::before, body::after {
+      content: "❄";
+      position: fixed;
+      font-size: 2rem;
+      animation: snow 3s linear infinite;
+      left: 20%;
+    }
+
+    body::after {
+      left: 70%;
+      font-size: 1.5rem;
+      animation-duration: 4s;
+    }
